@@ -37,8 +37,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/monder-software-app:${{ github.ref_name }}
-            ghcr.io/${{ github.repository_owner }}/monder-software-app:latest
+            ghcr.io/${{ github.repository_owner }}/modern-software-app:${{ github.ref_name }}
+            ghcr.io/${{ github.repository_owner }}/modern-software-app:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
