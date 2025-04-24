@@ -10,9 +10,12 @@
         pkgs = import nixpkgs { inherit system; };
       in {
         devShell = pkgs.mkShell {
-          buildInputs = [
-            pkgs.dotnetCorePackages.sdk_9_0
-            pkgs.dotnetCorePackages.runtime_9_0
+          buildInputs = with pkgs; [
+            dotnetCorePackages.sdk_9_0
+            dotnetCorePackages.runtime_9_0
+
+            docker
+            git
           ];
 
           shellHook = ''
